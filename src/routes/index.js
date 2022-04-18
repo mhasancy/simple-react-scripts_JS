@@ -48,7 +48,7 @@ export default function Router() {
       path: '*',
       element: <LogoOnlyLayout />,
       children: [
-        { path: '404', element: <NotFound /> },
+        { path: '404'},
         { path: '*', element: <Navigate to="/404" replace /> },
       ],
     },
@@ -64,4 +64,3 @@ const PageThree = Loadable(lazy(() => import('../pages/PageThree')));
 const PageFour = Loadable(lazy(() => import('../pages/PageFour')));
 const PageFive = Loadable(lazy(() => import('../pages/PageFive')));
 const PageSix = Loadable(lazy(() => import('../pages/PageSix')));
-const NotFound = Loadable(lazy(() => import('../pages/Page404')));
